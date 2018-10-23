@@ -1,4 +1,4 @@
-# Der Ticketautomat mit GUI
+# Der Ticketautomat mit GUI!
 
 Für die ÜSTRA soll ein neuer Ticketautomat entwickelt werden. Üstra Kunden können hier zunächst eines von drei Tickets wählen (Zone 1 Kurzstrecke, 1.35 EUR, Zone 2 - 2.75 EUR und Zone 3 - 3.50 EUR).
 
