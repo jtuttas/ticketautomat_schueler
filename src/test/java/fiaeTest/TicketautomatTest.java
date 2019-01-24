@@ -591,46 +591,7 @@ public class TicketautomatTest {
         geld.add(new Coin(Coins.EUR2,false));
         ta.paymentCompletet(geld);
         assertTrue("Ein Ticket wurde bezahlt es ist aber nicht ausgegeben worden!",ok);
-       ok=false;
-        ta = new Ticketautomat(new TicketautomatListener() {
-
-            @Override
-            public void setState(States s) {
-               
-            }
-
-            @Override
-            public void dispayPrice(Ticket t) {
-            }
-
-            @Override
-            public void reset() {
-            }
-
-            @Override
-            public void dispaySum(double sum) {
-                
-            }
-
-            @Override
-            public void returnCoins(ArrayList<Coin> c) {
-                double sum=getSum(c);
-                if (sum==2.0) ok=true;
-            }
-
-            @Override
-            public void returnTicket(String s) {
-            }
-
-            @Override
-            public void returnECCard(ECCard ec) {
-                
-            }
-        });
-        geld = new ArrayList<>();
-        geld.add(new Coin(Coins.EUR2,false));
-        ta.paymentCompletet(geld);
-        assertTrue("paymentCompletet() mit 2 EUR Restgeld, das Restgeld wurde aber nicht ausgegeben!",ok);
+       
        
     }
     
