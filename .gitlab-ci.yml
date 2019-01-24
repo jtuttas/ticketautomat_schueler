@@ -34,4 +34,4 @@ deploy:
         - master
     artifacts:
         paths:
-            - target/ticketautomat_schueler-1.0-SNAPSHOT.jar
+            - target/fiaeTest-1.0-SNAPSHOT.jar
