@@ -546,53 +546,5 @@ public class TicketautomatTest {
       
     }
 
-    /**
-     * Test of paymentCompletet method, of class Ticketautomat.
-     */
-    @Test
-    public void testPaymentCompletet() {
-        System.out.println("paymentComplete()");
-       ok=false;
-        Ticketautomat ta = new Ticketautomat(new TicketautomatListener() {
-
-            @Override
-            public void setState(States s) {
-               
-            }
-
-            @Override
-            public void dispayPrice(Ticket t) {
-            }
-
-            @Override
-            public void reset() {
-            }
-
-            @Override
-            public void dispaySum(double sum) {
-                
-            }
-
-            @Override
-            public void returnCoins(ArrayList<Coin> c) {
-            }
-
-            @Override
-            public void returnTicket(String s) {
-                ok=true;
-            }
-
-            @Override
-            public void returnECCard(ECCard ec) {
-                
-            }
-        });
-        ArrayList<Coin> geld = new ArrayList<>();
-        geld.add(new Coin(Coins.EUR2,false));
-        ta.paymentCompletet(geld);
-        assertTrue("Ein Ticket wurde bezahlt es ist aber nicht ausgegeben worden!",ok);
-       
-       
-    }
     
 }
