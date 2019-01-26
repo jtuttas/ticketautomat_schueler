@@ -13,12 +13,16 @@ build:
     stage: build
     script:
         - mvn compile
+    tag:
+        - tu-tag
 
 
 test:
     stage: test
     script:
         - mvn  test
+    tag:
+        - tu-tag
 
 deploy:
     stage: deploy
@@ -26,6 +30,8 @@ deploy:
         - mvn package
     only:
         - master
+    tag:
+        - tu-tag
     artifacts:
         paths:
             - target/fiaeTest-1.0-SNAPSHOT.jar
