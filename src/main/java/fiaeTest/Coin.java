@@ -7,7 +7,7 @@ package fiaeTest;
 public class Coin {
     
     /**
-     * Handlet es sich um Falschgeld!
+     * Handlet es sich um Falschgeld
      */
     private boolean falschgeld;
     /**
