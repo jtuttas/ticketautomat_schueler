@@ -13,23 +13,17 @@ build:
     stage: build
     script:
         - mvn compile
-    tags: 
-        - myrunner
 
 
 test:
     stage: test
     script:
         - mvn  test
-    tags: 
-        - myrunner
 
 deploy:
     stage: deploy
     script:
         - mvn package
-    tags: 
-        - myrunner
     only:
         - master
     artifacts:
