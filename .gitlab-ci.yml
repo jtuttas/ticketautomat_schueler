@@ -13,16 +13,18 @@ build:
     stage: build
     script:
         - mvn compile
-    tag:
+    tags:
         - tu-tag
+        - myrunner
 
 
 test:
     stage: test
     script:
         - mvn  test
-    tag:
+    tags:
         - tu-tag
+        - myrunner
 
 deploy:
     stage: deploy
@@ -30,8 +32,9 @@ deploy:
         - mvn package
     only:
         - master
-    tag:
+    tags:
         - tu-tag
+        - myrunner
     artifacts:
         paths:
             - target/fiaeTest-1.0-SNAPSHOT.jar
