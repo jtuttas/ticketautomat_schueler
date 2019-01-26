@@ -15,7 +15,6 @@ build:
         - mvn compile
     tags:
         - tu-tag
-        - myrunner
 
 
 test:
@@ -24,7 +23,6 @@ test:
         - mvn  test
     tags:
         - tu-tag
-        - myrunner
 
 deploy:
     stage: deploy
@@ -34,7 +32,6 @@ deploy:
         - master
     tags:
         - tu-tag
-        - myrunner
     artifacts:
         paths:
             - target/fiaeTest-1.0-SNAPSHOT.jar
